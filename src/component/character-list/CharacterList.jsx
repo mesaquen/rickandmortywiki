@@ -2,6 +2,13 @@ import React, { PureComponent } from 'react';
 import CharacterSource from '../../logic/CharacterSource';
 import CharacterItem from '../character-item/CharacterItem';
 import Button from '../button/Button';
+import styled from 'styled-components';
+
+const Container = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+`;
 
 export default class CharacterList extends PureComponent {
   constructor(props) {
@@ -56,13 +63,12 @@ export default class CharacterList extends PureComponent {
   render() {
     const { characters } = this.state;
     return (
-      <div>
-        <header>CharacterList</header>
-        <section>{characters.map(this.itemRenderer)}</section>
+      <>
+        <Container>{characters.map(this.itemRenderer)}</Container>
         <footer>
           <Button onClick={this.fetchNext}>Load more</Button>
         </footer>
-      </div>
+      </>
     );
   }
 }

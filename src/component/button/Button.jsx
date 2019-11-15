@@ -11,6 +11,8 @@ const StyledButton = styled.button`
   color: ${reversePrimaryColor};
   padding: 10px 5px;
   font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
   cursor: pointer;
   outline: none;
   transition: all 0.2s ease-in-out;
