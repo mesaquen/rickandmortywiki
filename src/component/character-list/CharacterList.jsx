@@ -3,6 +3,7 @@ import CharacterSource from '../../logic/CharacterSource';
 import CharacterItem from '../character-item/CharacterItem';
 import Button from '../button/Button';
 import styled from 'styled-components';
+import Modal from '../modal/Modal';
 
 const Container = styled.div`
   display: flex;
@@ -16,6 +17,7 @@ export default class CharacterList extends PureComponent {
     this.state = {
       characters: [],
       error: null,
+      showDetails: false,
     };
   }
 
@@ -44,10 +46,14 @@ export default class CharacterList extends PureComponent {
 
   updateList = data => {
     if (typeof data === 'object') {
+      const { characters: oldCharacters } = this.state;
       const {
         info: { next: nextPage },
-        results: characters,
+        results,
       } = data;
+
+      const characters = oldCharacters.concat(results);
+
       this.setState({ characters, nextPage, error: null });
     }
   };
@@ -56,18 +62,33 @@ export default class CharacterList extends PureComponent {
     this.setState({ error });
   };
 
+  handleShowDetails = item => {
+    this.setState({
+      showDetails: true,
+    });
+  };
+
+  hideDetails = () => this.setState({ showDetails: false });
+
   itemRenderer = character => {
-    return <CharacterItem key={character.id} item={character} />;
+    return (
+      <CharacterItem
+        key={character.id}
+        item={character}
+        onClickDetails={this.handleShowDetails}
+      />
+    );
   };
 
   render() {
-    const { characters } = this.state;
+    const { characters, showDetails } = this.state;
     return (
       <>
         <Container>{characters.map(this.itemRenderer)}</Container>
         <footer>
           <Button onClick={this.fetchNext}>Load more</Button>
         </footer>
+        <Modal visible={showDetails} onClose={this.hideDetails}></Modal>
       </>
     );
   }

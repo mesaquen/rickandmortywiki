@@ -8,7 +8,7 @@ const Container = styled.div`
   flex-direction: column;
   flex-shrink: 0;
   flex-grow: 0;
-  padding: 4px;
+  margin: 4px;
 `;
 
 const Header = styled.header`
@@ -27,11 +27,12 @@ const Title = styled.span`
   font-weight: bold;
   color: white;
   background: rgba(0, 0, 0, 0.3);
-  width: 100%;
+  width: 288px;
 `;
 
 const Image = styled.img`
   display: flex;
+  width: 300px;
 `;
 
 const Label = styled.span`
@@ -44,8 +45,15 @@ const ItemButton = styled(Button)`
 
 export default class CharacterItem extends PureComponent {
   static propTypes = {
-    item: PropTypes.object,
+    item: PropTypes.object.isRequired,
+    onClickDetails: PropTypes.func.isRequired,
   };
+
+  handleClickDetails = () => {
+    const { item, onClickDetails } = this.props;
+    onClickDetails.call(null, item);
+  };
+
   render() {
     const { item } = this.props;
     return (
@@ -58,7 +66,7 @@ export default class CharacterItem extends PureComponent {
         <Label>Species: {item.species}</Label>
         <Label>Gender: {item.gender}</Label>
         <Label>Origin: {item.origin.name}</Label>
-        <ItemButton>Details</ItemButton>
+        <ItemButton onClick={this.handleClickDetails}>Details</ItemButton>
       </Container>
     );
   }
