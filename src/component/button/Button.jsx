@@ -41,8 +41,15 @@ export default class Button extends PureComponent {
     color: 'teal',
   };
 
+  handleClick = () => {
+    const { onClick } = this.props;
+    if (typeof onClick === 'function') {
+      onClick.call(null);
+    }
+  };
+
   render() {
     const props = this.props;
-    return <StyledButton {...props} />;
+    return <StyledButton {...props} onClick={this.handleClick} />;
   }
 }

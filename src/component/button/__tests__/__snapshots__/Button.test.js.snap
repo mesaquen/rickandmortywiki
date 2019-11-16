@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button button is rendererd with default values 1`] = `
+<button
+  className="sc-bdVaJa cUTSOG"
+  color="teal"
+  onClick={[Function]}
+>
+  Sample
+</button>
+`;
