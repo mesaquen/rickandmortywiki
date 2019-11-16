@@ -5,7 +5,7 @@ import Button from '../button/Button';
 import Text from '../text/Text';
 import Label from '../label/Label';
 import Image from '../image/Image';
-import Skeleton from 'react-loading-skeleton';
+import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 
 const Container = styled.div`
   display: flex;
@@ -98,16 +98,18 @@ export default class CharacterItem extends PureComponent {
   render() {
     const { loading } = this.props;
     return (
-      <Container>
-        {this.renderHeader()}
+      <SkeletonTheme color="#777" highlightColor="#AAA">
+        <Container>
+          {this.renderHeader()}
 
-        <Details>{this.renderLabels()}</Details>
-        {loading ? null : (
-          <ItemButton primary onClick={this.handleClickDetails}>
-            Details
-          </ItemButton>
-        )}
-      </Container>
+          <Details>{this.renderLabels()}</Details>
+          {loading ? null : (
+            <ItemButton primary onClick={this.handleClickDetails}>
+              Details
+            </ItemButton>
+          )}
+        </Container>
+      </SkeletonTheme>
     );
   }
 }

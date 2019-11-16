@@ -102,7 +102,8 @@ export default class CharacterList extends PureComponent {
     });
   };
 
-  hideDetails = () => this.setState({ character: null, showDetails: false });
+  hideDetails = () =>
+    this.setState({ episodeReady: false, character: null, showDetails: false });
 
   itemRenderer = character => {
     return (

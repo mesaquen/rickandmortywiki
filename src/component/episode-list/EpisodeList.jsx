@@ -41,16 +41,20 @@ export default class EpisodeList extends Component {
   };
 
   renderSkeleton = () => {
-    return <Skeleton count={3} />;
+    return (
+      <ListItem>
+        <Skeleton count={3} />
+      </ListItem>
+    );
   };
   render() {
-    const { ready, episodes } = this.props;
+    const { ready } = this.props;
 
     return (
       <>
         <Header>
           <Text size="20px" bold>
-            Episodes ({episodes.length})
+            Episodes
           </Text>
         </Header>
         <Container>
