@@ -1,0 +1,111 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Label should have same snapshot when loading 1`] = `
+Array [
+  <div
+    className="sc-ifAKCX dKuNcs"
+  >
+    <span
+      className="sc-bdVaJa hlPbXB"
+      color="#444"
+      size="20px"
+    >
+      Episodes
+    </span>
+  </div>,
+  <div
+    className="sc-bwzfXH kulSxP"
+  >
+    <ul
+      className="sc-bxivhb iBQVXW"
+    >
+      <li
+        className="sc-htpNat iknpIM"
+      >
+        <span>
+          <span
+            className="css-19bon8n react-loading-skeleton"
+            style={
+              Object {
+                "animation": "animation-16jpnkj 1.2s ease-in-out infinite",
+              }
+            }
+          >
+            ‌
+          </span>
+          <span
+            className="css-19bon8n react-loading-skeleton"
+            style={
+              Object {
+                "animation": "animation-16jpnkj 1.2s ease-in-out infinite",
+              }
+            }
+          >
+            ‌
+          </span>
+          <span
+            className="css-19bon8n react-loading-skeleton"
+            style={
+              Object {
+                "animation": "animation-16jpnkj 1.2s ease-in-out infinite",
+              }
+            }
+          >
+            ‌
+          </span>
+        </span>
+      </li>
+    </ul>
+  </div>,
+]
+`;
+
+exports[`Label when rendering values should have same snapshot 1`] = `
+Array [
+  <div
+    className="sc-ifAKCX dKuNcs"
+  >
+    <span
+      className="sc-bdVaJa hlPbXB"
+      color="#444"
+      size="20px"
+    >
+      Episodes
+    </span>
+  </div>,
+  <div
+    className="sc-bwzfXH kulSxP"
+  >
+    <ul
+      className="sc-bxivhb iBQVXW"
+    >
+      <li
+        className="sc-htpNat iknpIM"
+      >
+        <span
+          className="sc-bdVaJa iaInPU"
+          color="#444"
+          size="12px"
+        >
+          S01E01
+           - 
+          one
+        </span>
+      </li>
+      <li
+        className="sc-htpNat iknpIM"
+      >
+        <span
+          className="sc-bdVaJa iaInPU"
+          color="#444"
+          size="12px"
+        >
+          S01E02
+           - 
+          two
+        </span>
+      </li>
+    </ul>
+  </div>,
+]
+`;
