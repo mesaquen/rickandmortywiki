@@ -1,10 +1,11 @@
 import React, { PureComponent } from 'react';
-import CharacterSource from '../../logic/CharacterSource';
+import DataSource from '../../logic/DataSource';
 import CharacterItem from '../character-item/CharacterItem';
 import Button from '../button/Button';
 import styled from 'styled-components';
 import Modal from '../modal/Modal';
 import Text from '../text/Text';
+import EpisodeList from '../episode-list/EpisodeList';
 
 const Container = styled.div`
   display: flex;
@@ -18,6 +19,7 @@ export default class CharacterList extends PureComponent {
     this.state = {
       character: null,
       characters: [],
+      episodes: [],
       error: null,
       showDetails: false,
     };
@@ -27,9 +29,18 @@ export default class CharacterList extends PureComponent {
     this.fetchData();
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    const { showDetails: prevShowDetails } = prevState;
+    const { showDetails } = this.state;
+
+    if (showDetails && showDetails !== prevShowDetails) {
+      this.fetchCharacterEpisodes();
+    }
+  }
+
   fetchData = async () => {
     try {
-      const response = await CharacterSource.fetchCharacters();
+      const response = await DataSource.fetchCharacters();
       this.updateList(response.data);
     } catch (error) {
       this.handleErrors(error);
@@ -39,10 +50,28 @@ export default class CharacterList extends PureComponent {
   fetchNext = async () => {
     const { nextPage } = this.state;
     try {
-      const response = await CharacterSource.fetchURL(nextPage);
+      const response = await DataSource.fetchURL(nextPage);
       this.updateList(response.data);
     } catch (error) {
       this.handleErrors(error);
+    }
+  };
+
+  fetchCharacterEpisodes = async () => {
+    const {
+      character: { episode },
+    } = this.state;
+
+    try {
+      const episodes = await DataSource.fetchEpisodesNames(episode);
+      if (Array.isArray(episodes)) {
+        this.setState({
+          episodes,
+          episodeReady: true,
+        });
+      }
+    } catch (err) {
+      this.handleError(err);
     }
   };
 
@@ -84,11 +113,12 @@ export default class CharacterList extends PureComponent {
   };
 
   renderCharacterDetails = () => {
-    const { character } = this.state;
+    const { character, episodes, episodeReady } = this.state;
     if (character !== null) {
       return (
         <div>
           <Text>{character.name}</Text>
+          <EpisodeList episodes={episodes} ready={episodeReady} />
         </div>
       );
     }
