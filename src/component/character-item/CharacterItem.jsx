@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Button from '../button/Button';
+import Text from '../text/Text';
 
 const Container = styled.div`
   display: flex;
@@ -18,7 +19,7 @@ const Header = styled.header`
   position: relative;  
 `;
 
-const Title = styled.span`
+const Title = styled(Text)`
   position: absolute;
   padding-left: 12px;
   bottom: 0;
