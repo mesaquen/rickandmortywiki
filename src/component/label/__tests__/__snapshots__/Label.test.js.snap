@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Label should have same snapshot 1`] = `
+<div
+  className="sc-bwzfXH fAShlV"
+>
+  <span
+    className="sc-bdVaJa hvzDDn"
+    color="#999"
+    size="16px"
+  >
+    title
+  </span>
+  <span
+    className="sc-bdVaJa gRHTAW sc-htpNat JFHuA"
+    color="teal"
+    size="16px"
+  >
+    Value
+  </span>
+</div>
+`;
