@@ -4,9 +4,16 @@ import styled from 'styled-components';
 
 const primaryColor = props => (props.primary ? props.color : 'white');
 const reversePrimaryColor = props => (!props.primary ? props.color : 'white');
+const border = props => {
+  if (props.flat) {
+    return 'none';
+  }
+
+  return `1px solid ${props.color}`;
+};
 
 const StyledButton = styled.button`
-  border: 1px solid ${props => props.color};
+  border: ${border};
   background: ${primaryColor};
   color: ${reversePrimaryColor};
   padding: 10px 5px;
