@@ -1,28 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Modal should have same snapshot when hidden 1`] = `
-Array [
-  <span>
-    <span
-      className="css-19bon8n react-loading-skeleton"
-      style={
-        Object {
-          "animation": "animation-16jpnkj 1.2s ease-in-out infinite",
-        }
-      }
-    >
-      ‌
-    </span>
-  </span>,
-  <img
-    className="sc-bdVaJa fGYvF"
-    onLoad={[Function]}
-    src="none.jpg"
-  />,
-]
-`;
-
-exports[`Modal should have same snapshot when loading 1`] = `
+exports[`Image should have same snapshot when loading 1`] = `
 Array [
   <span>
     <span

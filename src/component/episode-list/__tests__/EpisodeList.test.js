@@ -6,7 +6,7 @@ import EpisodeList from '../EpisodeList';
  * @since 2019-11-16
  */
 
-describe('Label', () => {
+describe('EpisodeList', () => {
   let component = Renderer.create(<EpisodeList ready={false} />);
   it('should have same snapshot when loading', () => {
     expect(component.toJSON()).toMatchSnapshot();

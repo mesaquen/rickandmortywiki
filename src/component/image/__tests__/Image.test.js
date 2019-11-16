@@ -6,7 +6,7 @@ import Image from '../Image';
  * @since 2019-11-16
  */
 
-describe('Modal', () => {
+describe('Image', () => {
   const callback = jest.fn();
   let component = Renderer.create(<Image src="none.jpg" />);
   it('should have same snapshot when loading', () => {
