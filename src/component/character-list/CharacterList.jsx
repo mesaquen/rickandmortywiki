@@ -4,6 +4,7 @@ import CharacterItem from '../character-item/CharacterItem';
 import Button from '../button/Button';
 import styled from 'styled-components';
 import Modal from '../modal/Modal';
+import Text from '../text/Text';
 
 const Container = styled.div`
   display: flex;
@@ -15,6 +16,7 @@ export default class CharacterList extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
+      character: null,
       characters: [],
       error: null,
       showDetails: false,
@@ -62,13 +64,14 @@ export default class CharacterList extends PureComponent {
     this.setState({ error });
   };
 
-  handleShowDetails = item => {
+  handleShowDetails = character => {
     this.setState({
+      character,
       showDetails: true,
     });
   };
 
-  hideDetails = () => this.setState({ showDetails: false });
+  hideDetails = () => this.setState({ character: null, showDetails: false });
 
   itemRenderer = character => {
     return (
@@ -80,6 +83,18 @@ export default class CharacterList extends PureComponent {
     );
   };
 
+  renderCharacterDetails = () => {
+    const { character } = this.state;
+    if (character !== null) {
+      return (
+        <div>
+          <Text>{character.name}</Text>
+        </div>
+      );
+    }
+    return null;
+  };
+
   render() {
     const { characters, showDetails } = this.state;
     return (
@@ -88,7 +103,9 @@ export default class CharacterList extends PureComponent {
         <footer>
           <Button onClick={this.fetchNext}>Load more</Button>
         </footer>
-        <Modal visible={showDetails} onClose={this.hideDetails}></Modal>
+        <Modal visible={showDetails} onClose={this.hideDetails}>
+          {this.renderCharacterDetails()}
+        </Modal>
       </>
     );
   }

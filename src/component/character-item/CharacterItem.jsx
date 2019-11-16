@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Button from '../button/Button';
 import Text from '../text/Text';
+import Label from '../label/Label';
 
 const Container = styled.div`
   display: flex;
@@ -36,12 +37,20 @@ const Image = styled.img`
   width: 300px;
 `;
 
-const Label = styled.span`
-  font-size: 14px;
-`;
-
 const ItemButton = styled(Button)`
   margin-top: 8px;
+`;
+
+const Details = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  > * {
+    border-bottom: 1px solid lightgray;
+  }
+  > :last-child {
+    border-bottom: none;
+  }
 `;
 
 export default class CharacterItem extends PureComponent {
@@ -63,10 +72,11 @@ export default class CharacterItem extends PureComponent {
           <Image src={item.image} />
           <Title>{item.name}</Title>
         </Header>
-
-        <Label>Species: {item.species}</Label>
-        <Label>Gender: {item.gender}</Label>
-        <Label>Origin: {item.origin.name}</Label>
+        <Details>
+          <Label title="Species">{item.species}</Label>
+          <Label title="Gender"> {item.gender}</Label>
+          <Label title="Origin"> {item.origin.name}</Label>
+        </Details>
         <ItemButton onClick={this.handleClickDetails}>Details</ItemButton>
       </Container>
     );
