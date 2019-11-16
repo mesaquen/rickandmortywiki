@@ -15,10 +15,6 @@ describe('Modal', () => {
   });
 
   describe('when rendering visible', () => {
-    const episodes = [
-      { id: 1, episode: 'S01E01', name: 'one' },
-      { id: 2, episode: 'S01E02', name: 'two' },
-    ];
     beforeEach(() => {
       component = Renderer.create(
         <Modal visible onClose={callback}>
