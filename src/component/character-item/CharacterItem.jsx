@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Button from '../button/Button';
 import Text from '../text/Text';
 import Label from '../label/Label';
+import Image from '../image/Image';
 
 const Container = styled.div`
   display: flex;
@@ -11,12 +12,13 @@ const Container = styled.div`
   flex-shrink: 0;
   flex-grow: 0;
   margin: 4px;
+  padding: 4px;
+  background: rgb(68, 68, 68);
 `;
 
 const Header = styled.header`
   display: flex
   max-width: 300px;
-  background: red;
   position: relative;  
 `;
 
@@ -32,9 +34,8 @@ const Title = styled(Text)`
   width: 288px;
 `;
 
-const Image = styled.img`
+const StyledImage = styled(Image)`
   display: flex;
-  width: 300px;
 `;
 
 const ItemButton = styled(Button)`
@@ -69,7 +70,7 @@ export default class CharacterItem extends PureComponent {
     return (
       <Container>
         <Header>
-          <Image src={item.image} />
+          <StyledImage src={item.image} width={300} height={300} />
           <Title>{item.name}</Title>
         </Header>
         <Details>
@@ -77,7 +78,9 @@ export default class CharacterItem extends PureComponent {
           <Label title="Gender"> {item.gender}</Label>
           <Label title="Origin"> {item.origin.name}</Label>
         </Details>
-        <ItemButton onClick={this.handleClickDetails}>Details</ItemButton>
+        <ItemButton primary onClick={this.handleClickDetails}>
+          Details
+        </ItemButton>
       </Container>
     );
   }

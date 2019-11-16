@@ -5,6 +5,11 @@ import Text from '../text/Text';
 const Container = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
+`;
+
+const StyledText = styled(Text)`
+  text-align: right;
 `;
 
 function Label(props) {
@@ -12,7 +17,7 @@ function Label(props) {
   return (
     <Container>
       <Text color="#999">{title}</Text>
-      <Text color="teal">{children}</Text>
+      <StyledText color="teal">{children}</StyledText>
     </Container>
   );
 }

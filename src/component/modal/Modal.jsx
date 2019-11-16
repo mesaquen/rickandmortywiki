@@ -63,7 +63,7 @@ export default class Modal extends PureComponent {
     return (
       <Fog visible={visible} onClick={onClose}>
         <Container onClick={this.stopPropagation}>
-          <Text size="20px" bold color="#444444">
+          <Text size="20px" bold>
             Character Details
           </Text>
           <Content>{children}</Content>

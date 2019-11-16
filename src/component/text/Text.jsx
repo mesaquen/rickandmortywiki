@@ -20,7 +20,7 @@ Text.propTypes = {
 
 Text.defaultProps = {
   size: '16px',
-  color: '#000000',
+  color: '#444',
   bold: false,
 };
 

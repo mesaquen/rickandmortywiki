@@ -4,8 +4,8 @@ import CharacterItem from '../character-item/CharacterItem';
 import Button from '../button/Button';
 import styled from 'styled-components';
 import Modal from '../modal/Modal';
-import Text from '../text/Text';
 import EpisodeList from '../episode-list/EpisodeList';
+import Label from '../label/Label';
 
 const Container = styled.div`
   display: flex;
@@ -116,8 +116,13 @@ export default class CharacterList extends PureComponent {
     const { character, episodes, episodeReady } = this.state;
     if (character !== null) {
       return (
-        <div>
-          <Text>{character.name}</Text>
+        <div style={{ flex: 1 }}>
+          <Label title="Name">{character.name}</Label>
+          <Label title="Status">{character.status}</Label>
+          <Label title="Species">{character.species}</Label>
+          <Label title="Gender"> {character.gender}</Label>
+          <Label title="Origin"> {character.origin.name}</Label>
+          <Label title="Last location"> {character.location.name}</Label>
           <EpisodeList episodes={episodes} ready={episodeReady} />
         </div>
       );
@@ -131,7 +136,9 @@ export default class CharacterList extends PureComponent {
       <>
         <Container>{characters.map(this.itemRenderer)}</Container>
         <footer>
-          <Button onClick={this.fetchNext}>Load more</Button>
+          <Button onClick={this.fetchNext} flat primary>
+            Load more
+          </Button>
         </footer>
         <Modal visible={showDetails} onClose={this.hideDetails}>
           {this.renderCharacterDetails()}

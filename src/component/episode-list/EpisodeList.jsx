@@ -13,7 +13,7 @@ const ListItem = styled.li`
   flex: 0 0 100%;
 `;
 const List = styled.ul`
-  max-height: 300px;
+  max-height: 200px;
   overflow-y: auto;
   display: flex;
   flex-wrap: wrap;
@@ -21,8 +21,14 @@ const List = styled.ul`
   list-style-type: none;
   padding: 0;
 `;
-
+const Header = styled.div`
+  margin-top: 12px;
+`;
 export default class EpisodeList extends Component {
+  static propTypes = {
+    episodes: PropTypes.arrayOf(PropTypes.object),
+    ready: PropTypes.bool,
+  };
   renderEpisodes = () => {
     const { episodes } = this.props;
     return episodes.map(episode => (
@@ -38,11 +44,15 @@ export default class EpisodeList extends Component {
     return <Skeleton count={3} />;
   };
   render() {
-    const { ready } = this.props;
+    const { ready, episodes } = this.props;
 
     return (
       <>
-        <h2>Episodes</h2>
+        <Header>
+          <Text size="20px" bold>
+            Episodes ({episodes.length})
+          </Text>
+        </Header>
         <Container>
           <List>{ready ? this.renderEpisodes() : this.renderSkeleton()}</List>
         </Container>
