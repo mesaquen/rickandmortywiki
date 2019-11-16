@@ -1,0 +1,175 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CharacterItem should have same snapshot 1`] = `
+<div
+  className="css-vn4pqi"
+>
+  <div
+    className="sc-EHOje braUtV"
+  >
+    <header
+      className="sc-bZQynM jeWLZB"
+    >
+      <span>
+        <span
+          className="css-19bon8n react-loading-skeleton"
+          style={
+            Object {
+              "animation": "animation-16jpnkj 1.2s ease-in-out infinite",
+              "height": 300,
+              "width": 300,
+            }
+          }
+        >
+          ‌
+        </span>
+      </span>
+    </header>
+    <div
+      className="sc-iwsKbI bbIHvM"
+    >
+      <span>
+        <span
+          className="css-19bon8n react-loading-skeleton"
+          style={
+            Object {
+              "animation": "animation-16jpnkj 1.2s ease-in-out infinite",
+            }
+          }
+        >
+          ‌
+        </span>
+        <span
+          className="css-19bon8n react-loading-skeleton"
+          style={
+            Object {
+              "animation": "animation-16jpnkj 1.2s ease-in-out infinite",
+            }
+          }
+        >
+          ‌
+        </span>
+        <span
+          className="css-19bon8n react-loading-skeleton"
+          style={
+            Object {
+              "animation": "animation-16jpnkj 1.2s ease-in-out infinite",
+            }
+          }
+        >
+          ‌
+        </span>
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`CharacterItem when passing valid values should have same snapshot 1`] = `
+<div
+  className="css-vn4pqi"
+>
+  <div
+    className="sc-EHOje braUtV"
+  >
+    <header
+      className="sc-bZQynM jeWLZB"
+    >
+      <span>
+        <span
+          className="css-19bon8n react-loading-skeleton"
+          style={
+            Object {
+              "animation": "animation-16jpnkj 1.2s ease-in-out infinite",
+              "height": 300,
+              "width": 300,
+            }
+          }
+        >
+          ‌
+        </span>
+      </span>
+      <img
+        className="sc-ifAKCX sWWsi"
+        height={300}
+        onLoad={[Function]}
+        width={300}
+      />
+      <span
+        className="sc-bwzfXH ftqhvT sc-gzVnrw fwPmBx"
+        color="#444"
+        size="16px"
+      >
+        name
+      </span>
+    </header>
+    <div
+      className="sc-iwsKbI bbIHvM"
+    >
+      <div
+        className="sc-htpNat fAaqcp"
+      >
+        <span
+          className="sc-bwzfXH kSFAAu"
+          color="#999"
+          size="16px"
+        >
+          Species
+        </span>
+        <span
+          className="sc-bwzfXH hjeTZv sc-bxivhb gJaspy"
+          color="teal"
+          size="16px"
+        >
+          species
+        </span>
+      </div>
+      <div
+        className="sc-htpNat fAaqcp"
+      >
+        <span
+          className="sc-bwzfXH kSFAAu"
+          color="#999"
+          size="16px"
+        >
+          Gender
+        </span>
+        <span
+          className="sc-bwzfXH hjeTZv sc-bxivhb gJaspy"
+          color="teal"
+          size="16px"
+        >
+           
+          gender
+        </span>
+      </div>
+      <div
+        className="sc-htpNat fAaqcp"
+      >
+        <span
+          className="sc-bwzfXH kSFAAu"
+          color="#999"
+          size="16px"
+        >
+          Origin
+        </span>
+        <span
+          className="sc-bwzfXH hjeTZv sc-bxivhb gJaspy"
+          color="teal"
+          size="16px"
+        >
+           
+          origin
+        </span>
+      </div>
+    </div>
+    <button
+      className="sc-bdVaJa cnVkUI sc-dnqmqq gFXrOT"
+      color="teal"
+      onClick={[Function]}
+    >
+      Details
+    </button>
+  </div>
+</div>
+`;
