@@ -1,7 +1,10 @@
 import React, { PureComponent } from 'react';
 import Skeleton from 'react-loading-skeleton';
 import styled from 'styled-components';
-
+/**
+ * @author Mesaque Francisco <mesaquenf@gmail.com>
+ * @since 2019-11-16
+ */
 const StyledImage = styled.img`
   display: ${props => (props.ready ? 'block' : 'none')};
 `;

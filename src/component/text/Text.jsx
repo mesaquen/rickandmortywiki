@@ -1,7 +1,10 @@
 import React, { memo } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-
+/**
+ * @author Mesaque Francisco <mesaquenf@gmail.com>
+ * @since 2019-11-16
+ */
 const StyledText = styled.span`
   font-size: ${props => props.size};
   font-weight: ${props => (props.bold ? 'bold' : 'normal')};

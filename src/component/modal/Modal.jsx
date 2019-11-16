@@ -3,7 +3,10 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Text from '../text/Text';
 import Button from '../button/Button';
-
+/**
+ * @author Mesaque Francisco <mesaquenf@gmail.com>
+ * @since 2019-11-16
+ */
 const showHideModal = props => (props.visible ? 'block' : 'none');
 
 const Fog = styled.div`

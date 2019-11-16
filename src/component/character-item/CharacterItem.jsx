@@ -6,7 +6,10 @@ import Text from '../text/Text';
 import Label from '../label/Label';
 import Image from '../image/Image';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
-
+/**
+ * @author Mesaque Francisco <mesaquenf@gmail.com>
+ * @since 2019-11-16
+ */
 const Container = styled.div`
   display: flex;
   flex-direction: column;

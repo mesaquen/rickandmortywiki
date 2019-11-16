@@ -6,7 +6,10 @@ import styled from 'styled-components';
 import Modal from '../modal/Modal';
 import EpisodeList from '../episode-list/EpisodeList';
 import Label from '../label/Label';
-
+/**
+ * @author Mesaque Francisco <mesaquenf@gmail.com>
+ * @since 2019-11-16
+ */
 const DUMMY_ITEMS = [1, 2, 3, 4];
 
 const Container = styled.div`

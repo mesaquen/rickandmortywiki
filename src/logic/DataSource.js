@@ -1,4 +1,8 @@
 import axios from 'axios';
+/**
+ * @author Mesaque Francisco <mesaquenf@gmail.com>
+ * @since 2019-11-16
+ */
 const BASE_URL = 'https://rickandmortyapi.com/api';
 
 async function fetchCharacters() {
