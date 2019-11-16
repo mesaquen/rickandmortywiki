@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal should have same snapshot when hidden 1`] = `
+<div
+  className="sc-htpNat bZypys"
+  onClick={[MockFunction]}
+>
+  <div
+    className="sc-bxivhb fEIvGE"
+    onClick={[Function]}
+  >
+    <span
+      className="sc-bdVaJa hlPbXB"
+      color="#444"
+      size="20px"
+    >
+      Character Details
+    </span>
+    <div
+      className="sc-ifAKCX eSYnoJ"
+    />
+    <footer
+      className="sc-EHOje gFUFTl"
+    >
+      <button
+        className="sc-bwzfXH ksmsEG"
+        color="teal"
+        onClick={[Function]}
+      >
+        Close
+      </button>
+    </footer>
+  </div>
+</div>
+`;
+
+exports[`Modal when rendering visible should have same snapshot 1`] = `
+<div
+  className="sc-htpNat dOqzDo"
+  onClick={[MockFunction]}
+>
+  <div
+    className="sc-bxivhb fEIvGE"
+    onClick={[Function]}
+  >
+    <span
+      className="sc-bdVaJa hlPbXB"
+      color="#444"
+      size="20px"
+    >
+      Character Details
+    </span>
+    <div
+      className="sc-ifAKCX eSYnoJ"
+    >
+      <span
+        className="sc-bdVaJa lbTbov"
+        color="#444"
+        size="16px"
+      >
+        Sample
+      </span>
+    </div>
+    <footer
+      className="sc-EHOje gFUFTl"
+    >
+      <button
+        className="sc-bwzfXH ksmsEG"
+        color="teal"
+        onClick={[Function]}
+      >
+        Close
+      </button>
+    </footer>
+  </div>
+</div>
+`;
