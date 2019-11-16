@@ -7,6 +7,8 @@ import Modal from '../modal/Modal';
 import EpisodeList from '../episode-list/EpisodeList';
 import Label from '../label/Label';
 
+const DUMMY_ITEMS = [1, 2, 3, 4];
+
 const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -85,7 +87,7 @@ export default class CharacterList extends PureComponent {
 
       const characters = oldCharacters.concat(results);
 
-      this.setState({ characters, nextPage, error: null });
+      this.setState({ ready: true, characters, nextPage, error: null });
     }
   };
 
@@ -112,6 +114,19 @@ export default class CharacterList extends PureComponent {
     );
   };
 
+  dummyRenderer = value => {
+    return <CharacterItem key={value} loading />;
+  };
+
+  renderCharacterList = () => {
+    const { characters, ready } = this.state;
+    if (ready) {
+      return characters.map(this.itemRenderer);
+    }
+
+    return DUMMY_ITEMS.map(this.dummyRenderer);
+  };
+
   renderCharacterDetails = () => {
     const { character, episodes, episodeReady } = this.state;
     if (character !== null) {
@@ -131,10 +146,11 @@ export default class CharacterList extends PureComponent {
   };
 
   render() {
-    const { characters, showDetails } = this.state;
+    const { showDetails } = this.state;
+
     return (
       <>
-        <Container>{characters.map(this.itemRenderer)}</Container>
+        <Container>{this.renderCharacterList()}</Container>
         <footer>
           <Button onClick={this.fetchNext} flat primary>
             Load more

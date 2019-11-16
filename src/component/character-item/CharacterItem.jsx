@@ -5,6 +5,7 @@ import Button from '../button/Button';
 import Text from '../text/Text';
 import Label from '../label/Label';
 import Image from '../image/Image';
+import Skeleton from 'react-loading-skeleton';
 
 const Container = styled.div`
   display: flex;
@@ -56,8 +57,8 @@ const Details = styled.div`
 
 export default class CharacterItem extends PureComponent {
   static propTypes = {
-    item: PropTypes.object.isRequired,
-    onClickDetails: PropTypes.func.isRequired,
+    item: PropTypes.object,
+    onClickDetails: PropTypes.func,
   };
 
   handleClickDetails = () => {
@@ -65,22 +66,47 @@ export default class CharacterItem extends PureComponent {
     onClickDetails.call(null, item);
   };
 
-  render() {
-    const { item } = this.props;
-    return (
-      <Container>
-        <Header>
+  renderHeader = () => {
+    const { item, loading } = this.props;
+    let content = <Skeleton width={300} height={300} />;
+
+    if (!loading) {
+      content = (
+        <>
           <StyledImage src={item.image} width={300} height={300} />
           <Title>{item.name}</Title>
-        </Header>
-        <Details>
-          <Label title="Species">{item.species}</Label>
-          <Label title="Gender"> {item.gender}</Label>
-          <Label title="Origin"> {item.origin.name}</Label>
-        </Details>
-        <ItemButton primary onClick={this.handleClickDetails}>
-          Details
-        </ItemButton>
+        </>
+      );
+    }
+    return <Header>{content}</Header>;
+  };
+
+  renderLabels = () => {
+    const { item, loading } = this.props;
+    if (loading) {
+      return <Skeleton count={3} />;
+    }
+    return (
+      <>
+        <Label title="Species">{item.species}</Label>
+        <Label title="Gender"> {item.gender}</Label>
+        <Label title="Origin"> {item.origin.name}</Label>
+      </>
+    );
+  };
+
+  render() {
+    const { loading } = this.props;
+    return (
+      <Container>
+        {this.renderHeader()}
+
+        <Details>{this.renderLabels()}</Details>
+        {loading ? null : (
+          <ItemButton primary onClick={this.handleClickDetails}>
+            Details
+          </ItemButton>
+        )}
       </Container>
     );
   }
