@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Text from '../text/Text';
@@ -46,37 +46,38 @@ const Footer = styled.footer`
   justify-content: flex-end;
 `;
 
-export default class Modal extends PureComponent {
-  static propTypes = {
-    children: PropTypes.node,
-    visible: PropTypes.bool,
-    onClose: PropTypes.func.isRequired,
-  };
-
-  static defaultProps = {
-    visible: false,
-  };
-
-  stopPropagation = event => {
+const Modal = props => {
+  const stopPropagation = event => {
     event.stopPropagation();
   };
 
-  render() {
-    const { children, onClose, visible } = this.props;
-    return (
-      <Fog visible={visible} onClick={onClose}>
-        <Container onClick={this.stopPropagation}>
-          <Text size="20px" bold>
-            Character Details
-          </Text>
-          <Content>{children}</Content>
-          <Footer>
-            <Button onClick={onClose} flat>
-              Close
-            </Button>
-          </Footer>
-        </Container>
-      </Fog>
-    );
-  }
-}
+  const { children, onClose, visible } = props;
+
+  return (
+    <Fog visible={visible} onClick={onClose}>
+      <Container onClick={stopPropagation}>
+        <Text size="20px" bold>
+          Character Details
+        </Text>
+        <Content>{children}</Content>
+        <Footer>
+          <Button onClick={onClose} flat>
+            Close
+          </Button>
+        </Footer>
+      </Container>
+    </Fog>
+  );
+};
+
+Modal.ropTypes = {
+  children: PropTypes.node,
+  visible: PropTypes.bool,
+  onClose: PropTypes.func.isRequired,
+};
+
+Modal.defaultProps = {
+  visible: false,
+};
+
+export default React.memo(Modal);
