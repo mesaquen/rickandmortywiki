@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import Text from '../text/Text';
 /**
@@ -15,7 +15,7 @@ const StyledText = styled(Text)`
   text-align: right;
 `;
 
-function Label(props) {
+const Label = props => {
   const { title, children } = props;
   return (
     <Container>
@@ -23,6 +23,6 @@ function Label(props) {
       <StyledText color="teal">{children}</StyledText>
     </Container>
   );
-}
+};
 
-export default memo(Label);
+export default React.memo(Label);
