@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { useState } from 'react';
 import Skeleton from 'react-loading-skeleton';
 import styled from 'styled-components';
 /**
@@ -9,34 +9,24 @@ const StyledImage = styled.img`
   display: ${props => (props.ready ? 'block' : 'none')};
 `;
 
-export default class Image extends PureComponent {
-  constructor(props) {
-    super(props);
-    this.state = {
-      ready: false,
-    };
-  }
+const Image = props => {
+  const [ready, setReady] = useState(false);
 
-  handleLoad = () => {
-    this.setState({ ready: true });
-  };
-  render() {
-    const { width, height, src } = this.props;
-    const { ready } = this.state;
+  const handleLoad = () => void setReady(true);
+  const { width, height, src } = props;
 
-    return (
-      <>
-        {ready ? null : (
-          <Skeleton ready={ready} width={width} height={height} />
-        )}
-        <StyledImage
-          ready={ready}
-          src={src}
-          onLoad={this.handleLoad}
-          width={width}
-          height={height}
-        />
-      </>
-    );
-  }
-}
+  return (
+    <>
+      {ready ? null : <Skeleton ready={ready} width={width} height={height} />}
+      <StyledImage
+        ready={ready}
+        src={src}
+        onLoad={handleLoad}
+        width={width}
+        height={height}
+      />
+    </>
+  );
+};
+
+export default React.memo(Image);
