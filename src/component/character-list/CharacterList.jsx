@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, { useReducer, useEffect } from 'react';
 import DataSource from '../../logic/DataSource';
 import CharacterItem from '../character-item/CharacterItem';
 import Button from '../button/Button';
@@ -17,72 +17,79 @@ const Container = styled.div`
   flex-wrap: wrap;
   justify-content: center;
 `;
+const initialState = {
+  character: null,
+  characters: [],
+  episodes: [],
+  error: null,
+  showDetails: false,
+};
 
-export default class CharacterList extends PureComponent {
-  constructor(props) {
-    super(props);
-    this.state = {
-      character: null,
-      characters: [],
-      episodes: [],
-      error: null,
-      showDetails: false,
+const reducer = (state, action) => {
+  switch (action.type) {
+    case 'update':
+      return { ...state, ...action.payload };
+    default:
+      throw new Error();
+  }
+};
+
+const CharacterList = props => {
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await DataSource.fetchCharacters();
+        updateList(response.data);
+      } catch (error) {
+        handleErrors(error);
+      }
     };
-  }
+    fetchData();
+  }, []);
 
-  componentDidMount() {
-    this.fetchData();
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    const { showDetails: prevShowDetails } = prevState;
-    const { showDetails } = this.state;
-
-    if (showDetails && showDetails !== prevShowDetails) {
-      this.fetchCharacterEpisodes();
+  useEffect(() => {
+    const { showDetails } = state;
+    if (showDetails) {
+      fetchCharacterEpisodes();
     }
-  }
+  });
 
-  fetchData = async () => {
-    try {
-      const response = await DataSource.fetchCharacters();
-      this.updateList(response.data);
-    } catch (error) {
-      this.handleErrors(error);
-    }
-  };
-
-  fetchNext = async () => {
+  const fetchNext = async () => {
     const { nextPage } = this.state;
     try {
       const response = await DataSource.fetchURL(nextPage);
-      this.updateList(response.data);
+      updateList(response.data);
     } catch (error) {
-      this.handleErrors(error);
+      handleErrors(error);
     }
   };
 
-  fetchCharacterEpisodes = async () => {
+  const fetchCharacterEpisodes = async () => {
     const {
       character: { episode },
-    } = this.state;
+    } = state;
 
     try {
       const episodes = await DataSource.fetchEpisodesNames(episode);
       if (Array.isArray(episodes)) {
-        this.setState({
-          episodes,
-          episodeReady: true,
+        dispatch({
+          type: 'update',
+          payload: {
+            episodes,
+            episodeReady: true,
+          },
         });
       }
     } catch (err) {
-      this.handleError(err);
+      handleErrors(err);
     }
   };
 
-  updateList = data => {
+  const updateList = data => {
     if (typeof data === 'object') {
-      const { characters: oldCharacters } = this.state;
+      const { characters: oldCharacters } = state;
       const {
         info: { next: nextPage },
         results,
@@ -90,49 +97,63 @@ export default class CharacterList extends PureComponent {
 
       const characters = oldCharacters.concat(results);
 
-      this.setState({ ready: true, characters, nextPage, error: null });
+      dispatch({
+        type: 'update',
+        payload: { ready: true, characters, nextPage, error: null },
+      });
     }
   };
 
-  handleErrors = error => {
-    this.setState({ error });
+  const handleErrors = error => {
+    dispatch({ type: 'update', payload: { error } });
   };
 
-  handleShowDetails = character => {
-    this.setState({
-      character,
-      showDetails: true,
+  const handleShowDetails = character => {
+    dispatch({
+      type: 'update',
+      payload: {
+        character,
+        showDetails: true,
+      },
     });
   };
 
-  hideDetails = () =>
-    this.setState({ episodeReady: false, character: null, showDetails: false });
+  const hideDetails = () =>
+    dispatch({
+      type: 'update',
+      payload: {
+        episodeReady: false,
+        character: null,
+        showDetails: false,
+        episodes: [],
+      },
+    });
 
-  itemRenderer = character => {
+  const itemRenderer = character => {
     return (
       <CharacterItem
         key={character.id}
         item={character}
-        onClickDetails={this.handleShowDetails}
+        onClickDetails={handleShowDetails}
       />
     );
   };
 
-  dummyRenderer = value => {
+  const dummyRenderer = value => {
     return <CharacterItem key={value} loading />;
   };
 
-  renderCharacterList = () => {
-    const { characters, ready } = this.state;
+  const renderCharacterList = () => {
+    const { characters, ready } = state;
     if (ready) {
-      return characters.map(this.itemRenderer);
+      return characters.map(itemRenderer);
     }
 
-    return DUMMY_ITEMS.map(this.dummyRenderer);
+    return DUMMY_ITEMS.map(dummyRenderer);
   };
 
-  renderCharacterDetails = () => {
-    const { character, episodes, episodeReady } = this.state;
+  const renderCharacterDetails = () => {
+    const { character, episodes, episodeReady } = state;
     if (character !== null) {
       return (
         <div style={{ flex: 1 }}>
@@ -149,21 +170,21 @@ export default class CharacterList extends PureComponent {
     return null;
   };
 
-  render() {
-    const { showDetails } = this.state;
+  const { showDetails } = state;
 
-    return (
-      <>
-        <Container>{this.renderCharacterList()}</Container>
-        <footer>
-          <Button onClick={this.fetchNext} flat primary>
-            Load more
-          </Button>
-        </footer>
-        <Modal visible={showDetails} onClose={this.hideDetails}>
-          {this.renderCharacterDetails()}
-        </Modal>
-      </>
-    );
-  }
-}
+  return (
+    <>
+      <Container>{renderCharacterList()}</Container>
+      <footer>
+        <Button onClick={fetchNext} flat primary>
+          Load more
+        </Button>
+      </footer>
+      <Modal visible={showDetails} onClose={hideDetails}>
+        {renderCharacterDetails()}
+      </Modal>
+    </>
+  );
+};
+
+export default CharacterList;
