@@ -4,6 +4,7 @@ exports[`Button button is rendererd with default values 1`] = `
 <button
   className="sc-bdVaJa cUTSOG"
   color="teal"
+  data-testid="button"
   onClick={[Function]}
 >
   Sample

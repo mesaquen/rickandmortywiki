@@ -33,26 +33,25 @@ const StyledButton = styled.button`
   }
 `;
 
-export default class Button extends PureComponent {
-  static propTypes = {
-    color: PropTypes.string,
-    primary: PropTypes.bool,
-  };
-
-  static defaultProps = {
-    primary: false,
-    color: 'teal',
-  };
-
-  handleClick = () => {
-    const { onClick } = this.props;
+const Button = props => {
+  const handleClick = () => {
+    const { onClick } = props;
     if (typeof onClick === 'function') {
       onClick.call(null);
     }
   };
 
-  render() {
-    const props = this.props;
-    return <StyledButton {...props} onClick={this.handleClick} />;
-  }
-}
+  return <StyledButton {...props} onClick={handleClick} data-testid="button" />;
+};
+
+Button.propTypes = {
+  color: PropTypes.string,
+  primary: PropTypes.bool,
+};
+
+Button.defaultProps = {
+  primary: false,
+  color: 'teal',
+};
+
+export default React.memo(Button);

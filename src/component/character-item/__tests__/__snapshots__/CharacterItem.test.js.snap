@@ -166,6 +166,7 @@ exports[`CharacterItem when passing valid values should have same snapshot 1`] =
     <button
       className="sc-bdVaJa cnVkUI sc-dnqmqq gFXrOT"
       color="teal"
+      data-testid="button"
       onClick={[Function]}
     >
       Details

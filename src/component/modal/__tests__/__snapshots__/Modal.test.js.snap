@@ -25,6 +25,7 @@ exports[`Modal should have same snapshot when hidden 1`] = `
       <button
         className="sc-bwzfXH ksmsEG"
         color="teal"
+        data-testid="button"
         onClick={[Function]}
       >
         Close
@@ -67,6 +68,7 @@ exports[`Modal when rendering visible should have same snapshot 1`] = `
       <button
         className="sc-bwzfXH ksmsEG"
         color="teal"
+        data-testid="button"
         onClick={[Function]}
       >
         Close
