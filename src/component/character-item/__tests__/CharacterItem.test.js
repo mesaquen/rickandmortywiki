@@ -1,5 +1,6 @@
 import React from 'react';
 import Renderer from 'react-test-renderer';
+import { render, fireEvent } from '@testing-library/react';
 import CharacterItem from '../CharacterItem';
 /**
  * @author Mesaque Francisco <mesaquenf@gmail.com>
@@ -31,8 +32,11 @@ describe('CharacterItem', () => {
     });
 
     it('should call onCllickDetails with same value', () => {
-      const instance = component.root.instance;
-      instance.handleClickDetails();
+      const { getByTestId } = render(
+        <CharacterItem item={item} onClickDetails={callback} />
+      );
+      const element = getByTestId('button');
+      fireEvent.click(element);
 
       expect(callback.mock.calls).toHaveLength(1);
       expect(callback.mock.calls[0][0]).toEqual(item);
