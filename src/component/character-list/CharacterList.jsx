@@ -1,11 +1,14 @@
 import React, { useReducer, useEffect } from 'react';
 import DataSource from '../../logic/DataSource';
-import CharacterItem from '../character-item/CharacterItem';
-import Button from '../button/Button';
 import styled from 'styled-components';
-import Modal from '../modal/Modal';
-import EpisodeList from '../episode-list/EpisodeList';
-import Label from '../label/Label';
+import {
+  Button,
+  CharacterItem,
+  EpisodeList,
+  Label,
+  Modal,
+} from '../../component';
+
 /**
  * @author Mesaque Francisco <mesaquenf@gmail.com>
  * @since 2019-11-16

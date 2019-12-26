@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import Text from '../text/Text';
-import Button from '../button/Button';
+import { Button, Text } from '../../component';
 /**
  * @author Mesaque Francisco <mesaquenf@gmail.com>
  * @since 2019-11-16

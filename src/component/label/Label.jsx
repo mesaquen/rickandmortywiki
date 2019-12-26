@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Text from '../text/Text';
+import { Text } from '../../component';
 /**
  * @author Mesaque Francisco <mesaquenf@gmail.com>
  * @since 2019-11-16

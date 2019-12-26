@@ -1,10 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import Button from '../button/Button';
-import Text from '../text/Text';
-import Label from '../label/Label';
-import Image from '../image/Image';
+import { Button, Text, Label, Image } from '../../component';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 /**
  * @author Mesaque Francisco <mesaquenf@gmail.com>

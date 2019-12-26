@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import CharacterList from './component/character-list/CharacterList';
-import Text from './component/text/Text';
+import { CharacterList, Text } from './component';
 
 const Container = styled.div`
   display: flex;
