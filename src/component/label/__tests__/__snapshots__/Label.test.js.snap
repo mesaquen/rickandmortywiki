@@ -2,17 +2,17 @@
 
 exports[`Label should have same snapshot 1`] = `
 <div
-  className="sc-bwzfXH fAShlV"
+  className="sc-kAzzGY ftdBxt"
 >
   <span
-    className="sc-bdVaJa hvzDDn"
+    className="sc-htpNat SwWzv"
     color="#999"
     size="16px"
   >
     title
   </span>
   <span
-    className="sc-bdVaJa gRHTAW sc-htpNat JFHuA"
+    className="sc-htpNat kNOgIk sc-chPdSV cMhbop"
     color="teal"
     size="16px"
   >

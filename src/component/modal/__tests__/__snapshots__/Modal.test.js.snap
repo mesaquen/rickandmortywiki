@@ -2,28 +2,28 @@
 
 exports[`Modal should have same snapshot when hidden 1`] = `
 <div
-  className="sc-htpNat bZypys"
+  className="sc-jzJRlG bZoLnt"
   onClick={[MockFunction]}
 >
   <div
-    className="sc-bxivhb fEIvGE"
+    className="sc-cSHVUG cEKVwh"
     onClick={[Function]}
   >
     <span
-      className="sc-bdVaJa hlPbXB"
+      className="sc-htpNat dwRXzK"
       color="#444"
       size="20px"
     >
       Character Details
     </span>
     <div
-      className="sc-ifAKCX eSYnoJ"
+      className="sc-kAzzGY kXVJzU"
     />
     <footer
-      className="sc-EHOje gFUFTl"
+      className="sc-chPdSV jAYBc"
     >
       <button
-        className="sc-bwzfXH ksmsEG"
+        className="sc-bdVaJa etHrZN"
         color="teal"
         data-testid="button"
         onClick={[Function]}
@@ -37,25 +37,25 @@ exports[`Modal should have same snapshot when hidden 1`] = `
 
 exports[`Modal when rendering visible should have same snapshot 1`] = `
 <div
-  className="sc-htpNat dOqzDo"
+  className="sc-jzJRlG ikDJvP"
   onClick={[MockFunction]}
 >
   <div
-    className="sc-bxivhb fEIvGE"
+    className="sc-cSHVUG cEKVwh"
     onClick={[Function]}
   >
     <span
-      className="sc-bdVaJa hlPbXB"
+      className="sc-htpNat dwRXzK"
       color="#444"
       size="20px"
     >
       Character Details
     </span>
     <div
-      className="sc-ifAKCX eSYnoJ"
+      className="sc-kAzzGY kXVJzU"
     >
       <span
-        className="sc-bdVaJa lbTbov"
+        className="sc-htpNat jZIyuc"
         color="#444"
         size="16px"
       >
@@ -63,10 +63,10 @@ exports[`Modal when rendering visible should have same snapshot 1`] = `
       </span>
     </div>
     <footer
-      className="sc-EHOje gFUFTl"
+      className="sc-chPdSV jAYBc"
     >
       <button
-        className="sc-bwzfXH ksmsEG"
+        className="sc-bdVaJa etHrZN"
         color="teal"
         data-testid="button"
         onClick={[Function]}

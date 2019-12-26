@@ -3,10 +3,10 @@
 exports[`EpisodeList should have same snapshot when loading 1`] = `
 Array [
   <div
-    className="sc-ifAKCX dKuNcs"
+    className="sc-chPdSV eErTkd"
   >
     <span
-      className="sc-bdVaJa hlPbXB"
+      className="sc-htpNat dwRXzK"
       color="#444"
       size="20px"
     >
@@ -14,13 +14,13 @@ Array [
     </span>
   </div>,
   <div
-    className="sc-bwzfXH kulSxP"
+    className="sc-jzJRlG eFkJPq"
   >
     <ul
-      className="sc-bxivhb iBQVXW"
+      className="sc-kAzzGY TbUrq"
     >
       <li
-        className="sc-htpNat iknpIM"
+        className="sc-cSHVUG IZCuM"
       >
         <span>
           <span
@@ -63,10 +63,10 @@ Array [
 exports[`EpisodeList when rendering values should have same snapshot 1`] = `
 Array [
   <div
-    className="sc-ifAKCX dKuNcs"
+    className="sc-chPdSV eErTkd"
   >
     <span
-      className="sc-bdVaJa hlPbXB"
+      className="sc-htpNat dwRXzK"
       color="#444"
       size="20px"
     >
@@ -74,16 +74,16 @@ Array [
     </span>
   </div>,
   <div
-    className="sc-bwzfXH kulSxP"
+    className="sc-jzJRlG eFkJPq"
   >
     <ul
-      className="sc-bxivhb iBQVXW"
+      className="sc-kAzzGY TbUrq"
     >
       <li
-        className="sc-htpNat iknpIM"
+        className="sc-cSHVUG IZCuM"
       >
         <span
-          className="sc-bdVaJa iaInPU"
+          className="sc-htpNat cmzTFd"
           color="#444"
           size="12px"
         >
@@ -93,10 +93,10 @@ Array [
         </span>
       </li>
       <li
-        className="sc-htpNat iknpIM"
+        className="sc-cSHVUG IZCuM"
       >
         <span
-          className="sc-bdVaJa iaInPU"
+          className="sc-htpNat cmzTFd"
           color="#444"
           size="12px"
         >

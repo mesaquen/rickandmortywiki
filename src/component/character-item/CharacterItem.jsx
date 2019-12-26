@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Button, Text, Label, Image } from '../../component';
+import { Button, Text, LabelList, Image } from '../../component';
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton';
 /**
  * @author Mesaque Francisco <mesaquenf@gmail.com>
@@ -81,13 +81,13 @@ const CharacterItem = props => {
     if (loading) {
       return <Skeleton count={3} />;
     }
-    return (
-      <>
-        <Label title="Species">{item.species}</Label>
-        <Label title="Gender"> {item.gender}</Label>
-        <Label title="Origin"> {item.origin.name}</Label>
-      </>
-    );
+
+    const items = [
+      { title: 'Species', value: item.species },
+      { title: 'Gender', value: item.gender },
+      { title: 'Origin', value: item.origin.name },
+    ];
+    return <LabelList items={items} />;
   };
 
   const { loading } = props;

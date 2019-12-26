@@ -5,10 +5,10 @@ exports[`CharacterItem should have same snapshot 1`] = `
   className="css-vn4pqi"
 >
   <div
-    className="sc-EHOje braUtV"
+    className="sc-jTzLTM bnQVHV"
   >
     <header
-      className="sc-bZQynM jeWLZB"
+      className="sc-fjdhpX dhOgqq"
     >
       <span>
         <span
@@ -26,7 +26,7 @@ exports[`CharacterItem should have same snapshot 1`] = `
       </span>
     </header>
     <div
-      className="sc-iwsKbI bbIHvM"
+      className="sc-chPdSV kDzWaJ"
     >
       <span>
         <span
@@ -70,10 +70,10 @@ exports[`CharacterItem when passing valid values should have same snapshot 1`] =
   className="css-vn4pqi"
 >
   <div
-    className="sc-EHOje braUtV"
+    className="sc-jTzLTM bnQVHV"
   >
     <header
-      className="sc-bZQynM jeWLZB"
+      className="sc-fjdhpX dhOgqq"
     >
       <span>
         <span
@@ -90,13 +90,13 @@ exports[`CharacterItem when passing valid values should have same snapshot 1`] =
         </span>
       </span>
       <img
-        className="sc-ifAKCX sWWsi"
+        className="sc-bwzfXH eKeXgs"
         height={300}
         onLoad={[Function]}
         width={300}
       />
       <span
-        className="sc-bwzfXH ftqhvT sc-gzVnrw fwPmBx"
+        className="sc-htpNat jZIyuc sc-jzJRlG JsMMJ"
         color="#444"
         size="16px"
       >
@@ -104,20 +104,20 @@ exports[`CharacterItem when passing valid values should have same snapshot 1`] =
       </span>
     </header>
     <div
-      className="sc-iwsKbI bbIHvM"
+      className="sc-chPdSV kDzWaJ"
     >
       <div
-        className="sc-htpNat fAaqcp"
+        className="sc-bxivhb kkzDWN"
       >
         <span
-          className="sc-bwzfXH kSFAAu"
+          className="sc-htpNat SwWzv"
           color="#999"
           size="16px"
         >
           Species
         </span>
         <span
-          className="sc-bwzfXH hjeTZv sc-bxivhb gJaspy"
+          className="sc-htpNat kNOgIk sc-ifAKCX gENqNG"
           color="teal"
           size="16px"
         >
@@ -125,46 +125,44 @@ exports[`CharacterItem when passing valid values should have same snapshot 1`] =
         </span>
       </div>
       <div
-        className="sc-htpNat fAaqcp"
+        className="sc-bxivhb kkzDWN"
       >
         <span
-          className="sc-bwzfXH kSFAAu"
+          className="sc-htpNat SwWzv"
           color="#999"
           size="16px"
         >
           Gender
         </span>
         <span
-          className="sc-bwzfXH hjeTZv sc-bxivhb gJaspy"
+          className="sc-htpNat kNOgIk sc-ifAKCX gENqNG"
           color="teal"
           size="16px"
         >
-           
           gender
         </span>
       </div>
       <div
-        className="sc-htpNat fAaqcp"
+        className="sc-bxivhb kkzDWN"
       >
         <span
-          className="sc-bwzfXH kSFAAu"
+          className="sc-htpNat SwWzv"
           color="#999"
           size="16px"
         >
           Origin
         </span>
         <span
-          className="sc-bwzfXH hjeTZv sc-bxivhb gJaspy"
+          className="sc-htpNat kNOgIk sc-ifAKCX gENqNG"
           color="teal"
           size="16px"
         >
-           
           origin
         </span>
       </div>
     </div>
     <button
-      className="sc-bdVaJa cnVkUI sc-dnqmqq gFXrOT"
+      className="sc-bdVaJa cnVkUI sc-kAzzGY dLFxrJ"
       color="teal"
       data-testid="button"
       onClick={[Function]}

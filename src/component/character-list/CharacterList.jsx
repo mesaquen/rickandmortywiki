@@ -5,7 +5,7 @@ import {
   Button,
   CharacterItem,
   EpisodeList,
-  Label,
+  LabelList,
   Modal,
 } from '../../component';
 
@@ -158,14 +158,18 @@ const CharacterList = props => {
   const renderCharacterDetails = () => {
     const { character, episodes, episodeReady } = state;
     if (character !== null) {
+      const labels = [
+        { title: 'Name', value: character.name },
+        { title: 'Status', value: character.status },
+        { title: 'Species', value: character.species },
+        { title: 'Gender', value: character.gender },
+        { title: 'Origin', value: character.origin.name },
+        { title: 'Last location', value: character.location.name },
+      ];
+
       return (
         <div style={{ flex: 1 }}>
-          <Label title="Name">{character.name}</Label>
-          <Label title="Status">{character.status}</Label>
-          <Label title="Species">{character.species}</Label>
-          <Label title="Gender"> {character.gender}</Label>
-          <Label title="Origin"> {character.origin.name}</Label>
-          <Label title="Last location"> {character.location.name}</Label>
+          <LabelList items={labels} />
           <EpisodeList episodes={episodes} ready={episodeReady} />
         </div>
       );

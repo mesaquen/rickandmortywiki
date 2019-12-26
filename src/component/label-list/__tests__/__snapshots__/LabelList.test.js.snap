@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LabelList should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="sc-bxivhb kkzDWN"
+  >
+    <span
+      class="sc-htpNat SwWzv"
+      color="#999"
+    >
+      label01
+    </span>
+    <span
+      class="sc-htpNat kNOgIk sc-ifAKCX gENqNG"
+      color="teal"
+    >
+      value01
+    </span>
+  </div>
+  <div
+    class="sc-bxivhb kkzDWN"
+  >
+    <span
+      class="sc-htpNat SwWzv"
+      color="#999"
+    >
+      label02
+    </span>
+    <span
+      class="sc-htpNat kNOgIk sc-ifAKCX gENqNG"
+      color="teal"
+    >
+      value02
+    </span>
+  </div>
+</DocumentFragment>
+`;
