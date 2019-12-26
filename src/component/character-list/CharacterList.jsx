@@ -28,8 +28,25 @@ const initialState = {
   showDetails: false,
 };
 
+const updateListReducer = (state, data) => {
+  if (typeof data === 'object') {
+    const { characters: oldCharacters } = state;
+    const {
+      info: { next: nextPage },
+      results,
+    } = data;
+
+    const characters = oldCharacters.concat(results);
+
+    return { ...state, ready: true, characters, nextPage, error: null };
+  }
+  return state;
+};
+
 const reducer = (state, action) => {
   switch (action.type) {
+    case 'updateList':
+      return updateListReducer(state, action.payload);
     case 'update':
       return { ...state, ...action.payload };
     default:
@@ -44,7 +61,7 @@ const CharacterList = props => {
     const fetchData = async () => {
       try {
         const response = await DataSource.fetchCharacters();
-        updateList(response.data);
+        dispatch({ type: 'updateList', payload: response.data });
       } catch (error) {
         handleErrors(error);
       }
@@ -60,10 +77,10 @@ const CharacterList = props => {
   });
 
   const fetchNext = async () => {
-    const { nextPage } = this.state;
+    const { nextPage } = state;
     try {
       const response = await DataSource.fetchURL(nextPage);
-      updateList(response.data);
+      dispatch({ type: 'updateList', payload: response.data });
     } catch (error) {
       handleErrors(error);
     }
@@ -87,23 +104,6 @@ const CharacterList = props => {
       }
     } catch (err) {
       handleErrors(err);
-    }
-  };
-
-  const updateList = data => {
-    if (typeof data === 'object') {
-      const { characters: oldCharacters } = state;
-      const {
-        info: { next: nextPage },
-        results,
-      } = data;
-
-      const characters = oldCharacters.concat(results);
-
-      dispatch({
-        type: 'update',
-        payload: { ready: true, characters, nextPage, error: null },
-      });
     }
   };
 
