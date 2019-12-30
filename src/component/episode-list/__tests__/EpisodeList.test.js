@@ -1,5 +1,5 @@
 import React from 'react';
-import Renderer from 'react-test-renderer';
+import { render, cleanup } from '@testing-library/react';
 import EpisodeList from '../EpisodeList';
 /**
  * @author Mesaque Francisco <mesaquenf@gmail.com>
@@ -7,21 +7,20 @@ import EpisodeList from '../EpisodeList';
  */
 
 describe('EpisodeList', () => {
-  let component = Renderer.create(<EpisodeList ready={false} />);
+  afterEach(cleanup);
+
   it('should have same snapshot when loading', () => {
-    expect(component.toJSON()).toMatchSnapshot();
+    const { asFragment } = render(<EpisodeList ready={false} />);
+    expect(asFragment()).toMatchSnapshot();
   });
 
-  describe('when rendering values', () => {
+  it('should have same snapshot when rendering values', () => {
     const episodes = [
       { id: 1, episode: 'S01E01', name: 'one' },
       { id: 2, episode: 'S01E02', name: 'two' },
     ];
-    beforeEach(() => {
-      component = Renderer.create(<EpisodeList episodes={episodes} ready />);
-    });
-    it('should have same snapshot', () => {
-      expect(component.toJSON()).toMatchSnapshot();
-    });
+
+    const { asFragment } = render(<EpisodeList episodes={episodes} ready />);
+    expect(asFragment()).toMatchSnapshot();
   });
 });

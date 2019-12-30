@@ -1,111 +1,91 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`EpisodeList should have same snapshot when loading 1`] = `
-Array [
+<DocumentFragment>
   <div
-    className="sc-chPdSV eErTkd"
+    class="sc-chPdSV eErTkd"
   >
     <span
-      className="sc-htpNat dwRXzK"
+      class="sc-htpNat dwRXzK"
       color="#444"
-      size="20px"
     >
       Episodes
     </span>
-  </div>,
+  </div>
   <div
-    className="sc-jzJRlG eFkJPq"
+    class="sc-jzJRlG eFkJPq"
   >
     <ul
-      className="sc-kAzzGY TbUrq"
+      class="sc-kAzzGY TbUrq"
     >
       <li
-        className="sc-cSHVUG IZCuM"
+        class="sc-cSHVUG IZCuM"
       >
         <span>
           <span
-            className="css-19bon8n react-loading-skeleton"
-            style={
-              Object {
-                "animation": "animation-16jpnkj 1.2s ease-in-out infinite",
-              }
-            }
+            class="css-19bon8n react-loading-skeleton"
+            style="animation: animation-16jpnkj 1.2s ease-in-out infinite;"
           >
             ‌
           </span>
           <span
-            className="css-19bon8n react-loading-skeleton"
-            style={
-              Object {
-                "animation": "animation-16jpnkj 1.2s ease-in-out infinite",
-              }
-            }
+            class="css-19bon8n react-loading-skeleton"
+            style="animation: animation-16jpnkj 1.2s ease-in-out infinite;"
           >
             ‌
           </span>
           <span
-            className="css-19bon8n react-loading-skeleton"
-            style={
-              Object {
-                "animation": "animation-16jpnkj 1.2s ease-in-out infinite",
-              }
-            }
+            class="css-19bon8n react-loading-skeleton"
+            style="animation: animation-16jpnkj 1.2s ease-in-out infinite;"
           >
             ‌
           </span>
         </span>
       </li>
     </ul>
-  </div>,
-]
+  </div>
+</DocumentFragment>
 `;
 
-exports[`EpisodeList when rendering values should have same snapshot 1`] = `
-Array [
+exports[`EpisodeList should have same snapshot when rendering values 1`] = `
+<DocumentFragment>
   <div
-    className="sc-chPdSV eErTkd"
+    class="sc-chPdSV eErTkd"
   >
     <span
-      className="sc-htpNat dwRXzK"
+      class="sc-htpNat dwRXzK"
       color="#444"
-      size="20px"
     >
       Episodes
     </span>
-  </div>,
+  </div>
   <div
-    className="sc-jzJRlG eFkJPq"
+    class="sc-jzJRlG eFkJPq"
   >
     <ul
-      className="sc-kAzzGY TbUrq"
+      class="sc-kAzzGY TbUrq"
     >
       <li
-        className="sc-cSHVUG IZCuM"
+        class="sc-cSHVUG IZCuM"
       >
         <span
-          className="sc-htpNat cmzTFd"
+          class="sc-htpNat cmzTFd"
           color="#444"
-          size="12px"
         >
-          S01E01
-           - 
-          one
+          S01E01 - one
         </span>
       </li>
       <li
-        className="sc-cSHVUG IZCuM"
+        class="sc-cSHVUG IZCuM"
       >
         <span
-          className="sc-htpNat cmzTFd"
+          class="sc-htpNat cmzTFd"
           color="#444"
-          size="12px"
         >
-          S01E02
-           - 
-          two
+          S01E02 - two
         </span>
       </li>
     </ul>
-  </div>,
-]
+  </div>
+</DocumentFragment>
 `;
