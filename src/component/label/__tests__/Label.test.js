@@ -1,5 +1,5 @@
 import React from 'react';
-import Renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import Label from '../Label';
 /**
  * @author Mesaque Francisco <mesaquenf@gmail.com>
@@ -7,8 +7,8 @@ import Label from '../Label';
  */
 
 describe('Label', () => {
-  let component = Renderer.create(<Label title="title">Value</Label>);
   it('should have same snapshot', () => {
-    expect(component.toJSON()).toMatchSnapshot();
+    const { asFragment } = render(<Label title="title">Value</Label>);
+    expect(asFragment()).toMatchSnapshot();
   });
 });

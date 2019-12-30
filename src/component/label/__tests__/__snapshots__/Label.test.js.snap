@@ -1,22 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Label should have same snapshot 1`] = `
-<div
-  className="sc-kAzzGY ftdBxt"
->
-  <span
-    className="sc-htpNat SwWzv"
-    color="#999"
-    size="16px"
+<DocumentFragment>
+  <div
+    class="sc-kAzzGY ftdBxt"
   >
-    title
-  </span>
-  <span
-    className="sc-htpNat kNOgIk sc-chPdSV cMhbop"
-    color="teal"
-    size="16px"
-  >
-    Value
-  </span>
-</div>
+    <span
+      class="sc-htpNat SwWzv"
+      color="#999"
+    >
+      title
+    </span>
+    <span
+      class="sc-htpNat kNOgIk sc-chPdSV cMhbop"
+      color="teal"
+    >
+      Value
+    </span>
+  </div>
+</DocumentFragment>
 `;
