@@ -1,12 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button button is rendererd with default values 1`] = `
-<button
-  className="sc-bdVaJa cUTSOG"
-  color="teal"
-  data-testid="button"
-  onClick={[Function]}
->
-  Sample
-</button>
+exports[`Button button is rendererd without errors 1`] = `
+<DocumentFragment>
+  <button
+    class="sc-bdVaJa cUTSOG"
+    color="teal"
+    data-testid="button"
+  >
+    Sample
+  </button>
+</DocumentFragment>
 `;

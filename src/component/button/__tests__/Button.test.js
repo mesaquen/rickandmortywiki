@@ -1,22 +1,20 @@
 import React from 'react';
-import Renderer from 'react-test-renderer';
-import { render, fireEvent } from '@testing-library/react';
+import { render, fireEvent, cleanup } from '@testing-library/react';
 import Button from '../Button';
 /**
  * @author Mesaque Francisco <mesaquenf@gmail.com>
  * @since 2019-11-16
  */
 describe('Button', () => {
-  let callback = jest.fn();
+  afterEach(cleanup);
 
-  test('button is rendererd with default values', function() {
-    const component = Renderer.create(
-      <Button onClick={callback}>Sample</Button>
-    );
-    expect(component.toJSON()).toMatchSnapshot();
+  test('button is rendererd without errors', function() {
+    const { asFragment } = render(<Button onClick={jest.fn}>Sample</Button>);
+    expect(asFragment()).toMatchSnapshot();
   });
 
-  test('buitton click callback is called', () => {
+  test('button click callback is called', () => {
+    const callback = jest.fn();
     const { getByTestId } = render(<Button onClick={callback}>Sample</Button>);
     const element = getByTestId('button');
     fireEvent.click(element);
