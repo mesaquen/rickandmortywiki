@@ -1,174 +1,145 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CharacterItem should have same snapshot 1`] = `
-<div
-  className="css-vn4pqi"
->
+<DocumentFragment>
   <div
-    className="sc-jTzLTM bnQVHV"
+    class="css-vn4pqi"
   >
-    <header
-      className="sc-fjdhpX dhOgqq"
-    >
-      <span>
-        <span
-          className="css-19bon8n react-loading-skeleton"
-          style={
-            Object {
-              "animation": "animation-16jpnkj 1.2s ease-in-out infinite",
-              "height": 300,
-              "width": 300,
-            }
-          }
-        >
-          ‌
-        </span>
-      </span>
-    </header>
     <div
-      className="sc-chPdSV kDzWaJ"
+      class="sc-jTzLTM bnQVHV"
     >
-      <span>
-        <span
-          className="css-19bon8n react-loading-skeleton"
-          style={
-            Object {
-              "animation": "animation-16jpnkj 1.2s ease-in-out infinite",
-            }
-          }
-        >
-          ‌
+      <header
+        class="sc-fjdhpX dhOgqq"
+      >
+        <span>
+          <span
+            class="css-19bon8n react-loading-skeleton"
+            style="animation: animation-16jpnkj 1.2s ease-in-out infinite; width: 300px; height: 300px;"
+          >
+            ‌
+          </span>
         </span>
-        <span
-          className="css-19bon8n react-loading-skeleton"
-          style={
-            Object {
-              "animation": "animation-16jpnkj 1.2s ease-in-out infinite",
-            }
-          }
-        >
-          ‌
+      </header>
+      <div
+        class="sc-chPdSV kDzWaJ"
+      >
+        <span>
+          <span
+            class="css-19bon8n react-loading-skeleton"
+            style="animation: animation-16jpnkj 1.2s ease-in-out infinite;"
+          >
+            ‌
+          </span>
+          <span
+            class="css-19bon8n react-loading-skeleton"
+            style="animation: animation-16jpnkj 1.2s ease-in-out infinite;"
+          >
+            ‌
+          </span>
+          <span
+            class="css-19bon8n react-loading-skeleton"
+            style="animation: animation-16jpnkj 1.2s ease-in-out infinite;"
+          >
+            ‌
+          </span>
         </span>
-        <span
-          className="css-19bon8n react-loading-skeleton"
-          style={
-            Object {
-              "animation": "animation-16jpnkj 1.2s ease-in-out infinite",
-            }
-          }
-        >
-          ‌
-        </span>
-      </span>
+      </div>
     </div>
   </div>
-</div>
+</DocumentFragment>
 `;
 
 exports[`CharacterItem when passing valid values should have same snapshot 1`] = `
-<div
-  className="css-vn4pqi"
->
+<DocumentFragment>
   <div
-    className="sc-jTzLTM bnQVHV"
+    class="css-vn4pqi"
   >
-    <header
-      className="sc-fjdhpX dhOgqq"
-    >
-      <span>
-        <span
-          className="css-19bon8n react-loading-skeleton"
-          style={
-            Object {
-              "animation": "animation-16jpnkj 1.2s ease-in-out infinite",
-              "height": 300,
-              "width": 300,
-            }
-          }
-        >
-          ‌
-        </span>
-      </span>
-      <img
-        className="sc-bwzfXH eKeXgs"
-        height={300}
-        onLoad={[Function]}
-        width={300}
-      />
-      <span
-        className="sc-htpNat jZIyuc sc-jzJRlG JsMMJ"
-        color="#444"
-        size="16px"
-      >
-        name
-      </span>
-    </header>
     <div
-      className="sc-chPdSV kDzWaJ"
+      class="sc-jTzLTM bnQVHV"
     >
-      <div
-        className="sc-bxivhb kkzDWN"
+      <header
+        class="sc-fjdhpX dhOgqq"
       >
-        <span
-          className="sc-htpNat SwWzv"
-          color="#999"
-          size="16px"
-        >
-          Species
+        <span>
+          <span
+            class="css-19bon8n react-loading-skeleton"
+            style="animation: animation-16jpnkj 1.2s ease-in-out infinite; width: 300px; height: 300px;"
+          >
+            ‌
+          </span>
         </span>
+        <img
+          class="sc-bwzfXH eKeXgs"
+          height="300"
+          width="300"
+        />
         <span
-          className="sc-htpNat kNOgIk sc-ifAKCX gENqNG"
-          color="teal"
-          size="16px"
+          class="sc-htpNat jZIyuc sc-jzJRlG JsMMJ"
+          color="#444"
         >
-          species
+          name
         </span>
-      </div>
+      </header>
       <div
-        className="sc-bxivhb kkzDWN"
+        class="sc-chPdSV kDzWaJ"
       >
-        <span
-          className="sc-htpNat SwWzv"
-          color="#999"
-          size="16px"
+        <div
+          class="sc-bxivhb kkzDWN"
         >
-          Gender
-        </span>
-        <span
-          className="sc-htpNat kNOgIk sc-ifAKCX gENqNG"
-          color="teal"
-          size="16px"
+          <span
+            class="sc-htpNat SwWzv"
+            color="#999"
+          >
+            Species
+          </span>
+          <span
+            class="sc-htpNat kNOgIk sc-ifAKCX gENqNG"
+            color="teal"
+          >
+            species
+          </span>
+        </div>
+        <div
+          class="sc-bxivhb kkzDWN"
         >
-          gender
-        </span>
+          <span
+            class="sc-htpNat SwWzv"
+            color="#999"
+          >
+            Gender
+          </span>
+          <span
+            class="sc-htpNat kNOgIk sc-ifAKCX gENqNG"
+            color="teal"
+          >
+            gender
+          </span>
+        </div>
+        <div
+          class="sc-bxivhb kkzDWN"
+        >
+          <span
+            class="sc-htpNat SwWzv"
+            color="#999"
+          >
+            Origin
+          </span>
+          <span
+            class="sc-htpNat kNOgIk sc-ifAKCX gENqNG"
+            color="teal"
+          >
+            origin
+          </span>
+        </div>
       </div>
-      <div
-        className="sc-bxivhb kkzDWN"
+      <button
+        class="sc-bdVaJa cnVkUI sc-kAzzGY dLFxrJ"
+        color="teal"
+        data-testid="button"
       >
-        <span
-          className="sc-htpNat SwWzv"
-          color="#999"
-          size="16px"
-        >
-          Origin
-        </span>
-        <span
-          className="sc-htpNat kNOgIk sc-ifAKCX gENqNG"
-          color="teal"
-          size="16px"
-        >
-          origin
-        </span>
-      </div>
+        Details
+      </button>
     </div>
-    <button
-      className="sc-bdVaJa cnVkUI sc-kAzzGY dLFxrJ"
-      color="teal"
-      data-testid="button"
-      onClick={[Function]}
-    >
-      Details
-    </button>
   </div>
-</div>
+</DocumentFragment>
 `;

@@ -1,6 +1,5 @@
 import React from 'react';
-import Renderer from 'react-test-renderer';
-import { render, fireEvent } from '@testing-library/react';
+import { render, fireEvent, cleanup } from '@testing-library/react';
 import CharacterItem from '../CharacterItem';
 /**
  * @author Mesaque Francisco <mesaquenf@gmail.com>
@@ -8,9 +7,11 @@ import CharacterItem from '../CharacterItem';
  */
 
 describe('CharacterItem', () => {
-  let component = Renderer.create(<CharacterItem loading />);
+  afterEach(cleanup);
+
   it('should have same snapshot', () => {
-    expect(component.toJSON()).toMatchSnapshot();
+    const { asFragment } = render(<CharacterItem loading />);
+    expect(asFragment()).toMatchSnapshot();
   });
 
   describe('when passing valid values', () => {
@@ -21,14 +22,12 @@ describe('CharacterItem', () => {
       gender: 'gender',
       origin: { name: 'origin' },
     };
-    beforeEach(() => {
-      component = Renderer.create(
-        <CharacterItem item={item} onClickDetails={callback} />
-      );
-    });
 
     it('should have same snapshot', () => {
-      expect(component.toJSON()).toMatchSnapshot();
+      const { asFragment } = render(
+        <CharacterItem item={item} onClickDetails={callback} />
+      );
+      expect(asFragment()).toMatchSnapshot();
     });
 
     it('should call onCllickDetails with same value', () => {
