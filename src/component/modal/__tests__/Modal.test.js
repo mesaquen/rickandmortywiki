@@ -1,5 +1,5 @@
 import React from 'react';
-import Renderer from 'react-test-renderer';
+import { render, cleanup, fireEvent } from '@testing-library/react';
 import Modal from '../Modal';
 import Text from '../../text/Text';
 /**
@@ -8,22 +8,33 @@ import Text from '../../text/Text';
  */
 
 describe('Modal', () => {
-  const callback = jest.fn();
-  let component = Renderer.create(<Modal onClose={callback} />);
+  afterEach(cleanup);
+
   it('should have same snapshot when hidden', () => {
-    expect(component.toJSON()).toMatchSnapshot();
+    const { asFragment } = render(<Modal onClose={jest.fn()} />);
+    expect(asFragment()).toMatchSnapshot();
   });
 
-  describe('when rendering visible', () => {
-    beforeEach(() => {
-      component = Renderer.create(
-        <Modal visible onClose={callback}>
-          <Text>Sample</Text>
-        </Modal>
-      );
-    });
-    it('should have same snapshot', () => {
-      expect(component.toJSON()).toMatchSnapshot();
-    });
+  it('should have same snapshot when visible', () => {
+    const { asFragment } = render(
+      <Modal visible onClose={jest.fn()}>
+        <Text>Sample</Text>
+      </Modal>
+    );
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  it('should call modal onClose callback when button is cliked', () => {
+    const callback = jest.fn();
+    const { getByTestId } = render(
+      <Modal onClose={callback} visible>
+        <Text>Sample</Text>
+      </Modal>
+    );
+
+    const element = getByTestId('button');
+    fireEvent.click(element);
+
+    expect(callback.mock.calls).toHaveLength(1);
   });
 });
