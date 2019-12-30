@@ -9,7 +9,7 @@ describe('Button', () => {
   afterEach(cleanup);
 
   test('button is rendererd without errors', function() {
-    const { asFragment } = render(<Button onClick={jest.fn}>Sample</Button>);
+    const { asFragment } = render(<Button onClick={jest.fn()}>Sample</Button>);
     expect(asFragment()).toMatchSnapshot();
   });
 
