@@ -1,5 +1,5 @@
 import React from 'react';
-import Renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import Image from '../Image';
 /**
  * @author Mesaque Francisco <mesaquenf@gmail.com>
@@ -7,8 +7,8 @@ import Image from '../Image';
  */
 
 describe('Image', () => {
-  let component = Renderer.create(<Image src="none.jpg" />);
+  const { asFragment } = render(<Image src="none.jpg" />);
   it('should have same snapshot when loading', () => {
-    expect(component.toJSON()).toMatchSnapshot();
+    expect(asFragment()).toMatchSnapshot();
   });
 });
