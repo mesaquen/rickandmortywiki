@@ -1,5 +1,5 @@
 import React from 'react';
-import Renderer from 'react-test-renderer';
+import { render } from '@testing-library/react';
 import Text from '../Text';
 /**
  * @author Mesaque Francisco <mesaquenf@gmail.com>
@@ -7,8 +7,8 @@ import Text from '../Text';
  */
 
 describe('Text', () => {
-  let component = Renderer.create(<Text size="18px">Value</Text>);
   it('should have same snapshot', () => {
-    expect(component.toJSON()).toMatchSnapshot();
+    const { asFragment } = render(<Text size="18px">Value</Text>);
+    expect(asFragment()).toMatchSnapshot();
   });
 });
