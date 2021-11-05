@@ -3,43 +3,46 @@
 exports[`EpisodeList should have same snapshot when loading 1`] = `
 <DocumentFragment>
   <div
-    class="sc-chPdSV eErTkd"
+    class="sc-fFeiMQ iEkKp"
   >
     <span
-      class="sc-htpNat dwRXzK"
+      class="sc-dkPtRN dSzjxW"
       color="#444"
     >
       Episodes
     </span>
   </div>
   <div
-    class="sc-jzJRlG eFkJPq"
+    class="sc-ksdxgE eKpHrr"
   >
     <ul
-      class="sc-kAzzGY TbUrq"
+      class="sc-fotOHu bWDwWu"
     >
       <li
-        class="sc-cSHVUG IZCuM"
+        class="sc-hBUSln iCYrLD"
       >
-        <span>
+        <span
+          aria-busy="true"
+          aria-live="polite"
+        >
           <span
-            class="css-19bon8n react-loading-skeleton"
-            style="animation: animation-16jpnkj 1.2s ease-in-out infinite;"
+            class="react-loading-skeleton"
           >
             ‌
           </span>
+          <br />
           <span
-            class="css-19bon8n react-loading-skeleton"
-            style="animation: animation-16jpnkj 1.2s ease-in-out infinite;"
+            class="react-loading-skeleton"
           >
             ‌
           </span>
+          <br />
           <span
-            class="css-19bon8n react-loading-skeleton"
-            style="animation: animation-16jpnkj 1.2s ease-in-out infinite;"
+            class="react-loading-skeleton"
           >
             ‌
           </span>
+          <br />
         </span>
       </li>
     </ul>
@@ -50,36 +53,36 @@ exports[`EpisodeList should have same snapshot when loading 1`] = `
 exports[`EpisodeList should have same snapshot when rendering values 1`] = `
 <DocumentFragment>
   <div
-    class="sc-chPdSV eErTkd"
+    class="sc-fFeiMQ iEkKp"
   >
     <span
-      class="sc-htpNat dwRXzK"
+      class="sc-dkPtRN dSzjxW"
       color="#444"
     >
       Episodes
     </span>
   </div>
   <div
-    class="sc-jzJRlG eFkJPq"
+    class="sc-ksdxgE eKpHrr"
   >
     <ul
-      class="sc-kAzzGY TbUrq"
+      class="sc-fotOHu bWDwWu"
     >
       <li
-        class="sc-cSHVUG IZCuM"
+        class="sc-hBUSln iCYrLD"
       >
         <span
-          class="sc-htpNat cmzTFd"
+          class="sc-dkPtRN fYoYQt"
           color="#444"
         >
           S01E01 - one
         </span>
       </li>
       <li
-        class="sc-cSHVUG IZCuM"
+        class="sc-hBUSln iCYrLD"
       >
         <span
-          class="sc-htpNat cmzTFd"
+          class="sc-dkPtRN fYoYQt"
           color="#444"
         >
           S01E02 - two

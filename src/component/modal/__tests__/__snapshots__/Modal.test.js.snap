@@ -3,25 +3,25 @@
 exports[`Modal should have same snapshot when hidden 1`] = `
 <DocumentFragment>
   <div
-    class="sc-jzJRlG bZoLnt"
+    class="sc-ksdxgE beWSEi"
   >
     <div
-      class="sc-cSHVUG cEKVwh"
+      class="sc-hBUSln cFZxiX"
     >
       <span
-        class="sc-htpNat dwRXzK"
+        class="sc-dkPtRN dSzjxW"
         color="#444"
       >
         Character Details
       </span>
       <div
-        class="sc-kAzzGY kXVJzU"
+        class="sc-fotOHu iLjeNh"
       />
       <footer
-        class="sc-chPdSV jAYBc"
+        class="sc-fFeiMQ ldKoWl"
       >
         <button
-          class="sc-bdVaJa etHrZN"
+          class="sc-bdvvtL kMWQOy"
           color="teal"
           data-testid="button"
         >
@@ -36,32 +36,32 @@ exports[`Modal should have same snapshot when hidden 1`] = `
 exports[`Modal should have same snapshot when visible 1`] = `
 <DocumentFragment>
   <div
-    class="sc-jzJRlG ikDJvP"
+    class="sc-ksdxgE dtjEpx"
   >
     <div
-      class="sc-cSHVUG cEKVwh"
+      class="sc-hBUSln cFZxiX"
     >
       <span
-        class="sc-htpNat dwRXzK"
+        class="sc-dkPtRN dSzjxW"
         color="#444"
       >
         Character Details
       </span>
       <div
-        class="sc-kAzzGY kXVJzU"
+        class="sc-fotOHu iLjeNh"
       >
         <span
-          class="sc-htpNat jZIyuc"
+          class="sc-dkPtRN jkAsmV"
           color="#444"
         >
           Sample
         </span>
       </div>
       <footer
-        class="sc-chPdSV jAYBc"
+        class="sc-fFeiMQ ldKoWl"
       >
         <button
-          class="sc-bdVaJa etHrZN"
+          class="sc-bdvvtL kMWQOy"
           color="teal"
           data-testid="button"
         >

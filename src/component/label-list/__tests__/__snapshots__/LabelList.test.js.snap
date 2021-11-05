@@ -3,32 +3,32 @@
 exports[`LabelList should match snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="sc-bxivhb kkzDWN"
+    class="sc-hKwDye dodXuz"
   >
     <span
-      class="sc-htpNat SwWzv"
+      class="sc-dkPtRN iBkRmY"
       color="#999"
     >
       label01
     </span>
     <span
-      class="sc-htpNat kNOgIk sc-ifAKCX gENqNG"
+      class="sc-dkPtRN uImFO sc-eCImPb gVHibD"
       color="teal"
     >
       value01
     </span>
   </div>
   <div
-    class="sc-bxivhb kkzDWN"
+    class="sc-hKwDye dodXuz"
   >
     <span
-      class="sc-htpNat SwWzv"
+      class="sc-dkPtRN iBkRmY"
       color="#999"
     >
       label02
     </span>
     <span
-      class="sc-htpNat kNOgIk sc-ifAKCX gENqNG"
+      class="sc-dkPtRN uImFO sc-eCImPb gVHibD"
       color="teal"
     >
       value02

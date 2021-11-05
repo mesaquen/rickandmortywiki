@@ -3,16 +3,16 @@
 exports[`Label should have same snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="sc-kAzzGY ftdBxt"
+    class="sc-fotOHu gwFnos"
   >
     <span
-      class="sc-htpNat SwWzv"
+      class="sc-dkPtRN iBkRmY"
       color="#999"
     >
       title
     </span>
     <span
-      class="sc-htpNat kNOgIk sc-chPdSV cMhbop"
+      class="sc-dkPtRN uImFO sc-fFeiMQ faZtdf"
       color="teal"
     >
       Value

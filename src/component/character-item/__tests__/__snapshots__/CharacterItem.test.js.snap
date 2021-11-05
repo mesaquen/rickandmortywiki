@@ -3,47 +3,53 @@
 exports[`CharacterItem should have same snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="css-vn4pqi"
+    class="sc-egiyK hhJPHS"
   >
-    <div
-      class="sc-jTzLTM bnQVHV"
+    <header
+      class="sc-bqiRlB bLBhLX"
     >
-      <header
-        class="sc-fjdhpX dhOgqq"
+      <span
+        aria-busy="true"
+        aria-live="polite"
       >
-        <span>
-          <span
-            class="css-19bon8n react-loading-skeleton"
-            style="animation: animation-16jpnkj 1.2s ease-in-out infinite; width: 300px; height: 300px;"
-          >
-            ‌
-          </span>
+        <span
+          class="react-loading-skeleton"
+          style="width: 300px; height: 300px; --highlight-color: #AAA;"
+        >
+          ‌
         </span>
-      </header>
-      <div
-        class="sc-chPdSV kDzWaJ"
+        <br />
+      </span>
+    </header>
+    <div
+      class="sc-fFeiMQ bIjmor"
+    >
+      <span
+        aria-busy="true"
+        aria-live="polite"
       >
-        <span>
-          <span
-            class="css-19bon8n react-loading-skeleton"
-            style="animation: animation-16jpnkj 1.2s ease-in-out infinite;"
-          >
-            ‌
-          </span>
-          <span
-            class="css-19bon8n react-loading-skeleton"
-            style="animation: animation-16jpnkj 1.2s ease-in-out infinite;"
-          >
-            ‌
-          </span>
-          <span
-            class="css-19bon8n react-loading-skeleton"
-            style="animation: animation-16jpnkj 1.2s ease-in-out infinite;"
-          >
-            ‌
-          </span>
+        <span
+          class="react-loading-skeleton"
+          style="--highlight-color: #AAA;"
+        >
+          ‌
         </span>
-      </div>
+        <br />
+        <span
+          class="react-loading-skeleton"
+          style="--highlight-color: #AAA;"
+        >
+          ‌
+        </span>
+        <br />
+        <span
+          class="react-loading-skeleton"
+          style="--highlight-color: #AAA;"
+        >
+          ‌
+        </span>
+        <br />
+      </span>
     </div>
   </div>
 </DocumentFragment>
@@ -52,94 +58,94 @@ exports[`CharacterItem should have same snapshot 1`] = `
 exports[`CharacterItem when passing valid values should have same snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="css-vn4pqi"
+    class="sc-egiyK hhJPHS"
   >
-    <div
-      class="sc-jTzLTM bnQVHV"
+    <header
+      class="sc-bqiRlB bLBhLX"
     >
-      <header
-        class="sc-fjdhpX dhOgqq"
+      <span
+        aria-busy="true"
+        aria-live="polite"
       >
-        <span>
-          <span
-            class="css-19bon8n react-loading-skeleton"
-            style="animation: animation-16jpnkj 1.2s ease-in-out infinite; width: 300px; height: 300px;"
-          >
-            ‌
-          </span>
-        </span>
-        <img
-          class="sc-bwzfXH eKeXgs"
-          height="300"
-          width="300"
-        />
         <span
-          class="sc-htpNat jZIyuc sc-jzJRlG JsMMJ"
-          color="#444"
+          class="react-loading-skeleton"
+          style="width: 300px; height: 300px; --highlight-color: #AAA;"
         >
-          name
+          ‌
         </span>
-      </header>
+        <br />
+      </span>
+      <img
+        class="sc-gsDKAQ hrqDZy"
+        height="300"
+        width="300"
+      />
+      <span
+        class="sc-dkPtRN jkAsmV sc-ksdxgE idArhN"
+        color="#444"
+      >
+        name
+      </span>
+    </header>
+    <div
+      class="sc-fFeiMQ bIjmor"
+    >
       <div
-        class="sc-chPdSV kDzWaJ"
+        class="sc-hKwDye dodXuz"
       >
-        <div
-          class="sc-bxivhb kkzDWN"
+        <span
+          class="sc-dkPtRN iBkRmY"
+          color="#999"
         >
-          <span
-            class="sc-htpNat SwWzv"
-            color="#999"
-          >
-            Species
-          </span>
-          <span
-            class="sc-htpNat kNOgIk sc-ifAKCX gENqNG"
-            color="teal"
-          >
-            species
-          </span>
-        </div>
-        <div
-          class="sc-bxivhb kkzDWN"
+          Species
+        </span>
+        <span
+          class="sc-dkPtRN uImFO sc-eCImPb gVHibD"
+          color="teal"
         >
-          <span
-            class="sc-htpNat SwWzv"
-            color="#999"
-          >
-            Gender
-          </span>
-          <span
-            class="sc-htpNat kNOgIk sc-ifAKCX gENqNG"
-            color="teal"
-          >
-            gender
-          </span>
-        </div>
-        <div
-          class="sc-bxivhb kkzDWN"
-        >
-          <span
-            class="sc-htpNat SwWzv"
-            color="#999"
-          >
-            Origin
-          </span>
-          <span
-            class="sc-htpNat kNOgIk sc-ifAKCX gENqNG"
-            color="teal"
-          >
-            origin
-          </span>
-        </div>
+          species
+        </span>
       </div>
-      <button
-        class="sc-bdVaJa cnVkUI sc-kAzzGY dLFxrJ"
-        color="teal"
-        data-testid="button"
+      <div
+        class="sc-hKwDye dodXuz"
       >
-        Details
-      </button>
+        <span
+          class="sc-dkPtRN iBkRmY"
+          color="#999"
+        >
+          Gender
+        </span>
+        <span
+          class="sc-dkPtRN uImFO sc-eCImPb gVHibD"
+          color="teal"
+        >
+          gender
+        </span>
+      </div>
+      <div
+        class="sc-hKwDye dodXuz"
+      >
+        <span
+          class="sc-dkPtRN iBkRmY"
+          color="#999"
+        >
+          Origin
+        </span>
+        <span
+          class="sc-dkPtRN uImFO sc-eCImPb gVHibD"
+          color="teal"
+        >
+          origin
+        </span>
+      </div>
     </div>
+    <button
+      class="sc-bdvvtL lbBTIY sc-fotOHu llQTdp"
+      color="teal"
+      data-testid="button"
+    >
+      Details
+    </button>
   </div>
 </DocumentFragment>
 `;

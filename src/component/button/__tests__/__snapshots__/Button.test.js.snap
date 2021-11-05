@@ -3,7 +3,7 @@
 exports[`Button button is rendererd without errors 1`] = `
 <DocumentFragment>
   <button
-    class="sc-bdVaJa cUTSOG"
+    class="sc-bdvvtL gaZmeA"
     color="teal"
     data-testid="button"
   >

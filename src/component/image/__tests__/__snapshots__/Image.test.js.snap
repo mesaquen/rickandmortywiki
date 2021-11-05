@@ -2,16 +2,19 @@
 
 exports[`Image should have same snapshot when loading 1`] = `
 <DocumentFragment>
-  <span>
+  <span
+    aria-busy="true"
+    aria-live="polite"
+  >
     <span
-      class="css-19bon8n react-loading-skeleton"
-      style="animation: animation-16jpnkj 1.2s ease-in-out infinite;"
+      class="react-loading-skeleton"
     >
       ‌
     </span>
+    <br />
   </span>
   <img
-    class="sc-bdVaJa fGYvF"
+    class="sc-bdvvtL juKweH"
     src="none.jpg"
   />
 </DocumentFragment>

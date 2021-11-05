@@ -20,4 +20,6 @@ async function fetchEpisodesNames(urls = []) {
   return responses.map(response => response.data);
 }
 
-export default { fetchCharacters, fetchEpisodesNames, fetchURL };
+const DataSource  = { fetchCharacters, fetchEpisodesNames, fetchURL };
+
+export default DataSource
